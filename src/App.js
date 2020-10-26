@@ -25,6 +25,19 @@ const App = () => {
   //when some body click on button 
   const changeItem = itemNumber => {
     //
+    if(winMessage){
+      return toast(winMessage,{type:"success"})
+    }
+
+    if(itemArray[itemNumber]==="empty"){
+      itemArray[itemNumber] = isCross?"cross" : "circle"
+      setIsCross(!isCross)
+    }
+    else{
+      return toast("already filled ", {type:"error"})
+    }
+
+    isWinner();
   }
   return (
   <Container className="p-5">
