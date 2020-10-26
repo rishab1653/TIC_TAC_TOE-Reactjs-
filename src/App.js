@@ -13,7 +13,9 @@ const App = () => {
   const [winMessage , setWinMessage] =useState("");
 
   const reLoad = () => {
-    //
+    setIsCross(false)
+    setWinMessage("")    
+    itemArray.fill("empty",0,9)
   }
 
   const isWinner = () => {
